@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Meadow Maids — Luxury Home Cleaning in Los Angeles</title>
+<meta name="description" content="Meadow Maids — luxury home cleaning in Los Angeles. Standard, deep, move-in/out and rental cleaning.">
+<meta name="theme-color" content="#ffffff">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --green:#243128; --green-2:#2b3a30; --gl:rgba(201,169,98,.35);
+  --line:#eadcb8; --gold:#b08a3e; --gold-d:#8f6c2a; --gold-l:#e8d39c;
+  --ink:#23262a; --muted:#6b6a64; --cream:#fbf8f1; --ltext:#efe7d4; --lmuted:#c9c1ab;
+  --grad:linear-gradient(100deg,#a97d2f 0%,#d9b86c 30%,#efe0b0 50%,#c9a253 70%,#9c7228 100%);
+  --serif:"Cormorant Garamond",Georgia,serif; --sans:"Jost",system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:#fff;color:var(--ink);line-height:1.55;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+.gold{background:linear-gradient(100deg,#8a6421 0%,#b8903f 35%,#d6b56b 52%,#b08a3e 68%,#7f5c1e 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.eyebrow{font-size:11px;font-weight:500;letter-spacing:.32em;text-transform:uppercase;color:var(--gold)}
+h2{font-family:var(--serif);font-weight:500;font-size:clamp(30px,4.4vw,42px);line-height:1.1;color:var(--ink);margin:8px 0 0}
+.head{text-align:center;margin-bottom:30px}
+section{padding:56px 0}
+.cream{background:var(--cream)}
+.btn{display:inline-flex;align-items:center;justify-content:center;font-family:var(--sans);font-weight:500;font-size:12px;letter-spacing:.2em;text-transform:uppercase;padding:16px 26px;border-radius:2px;border:1px solid transparent;cursor:pointer;transition:.25s}
+.btn-gold{background:var(--grad);background-size:160% 100%;color:#2a2214}
+.btn-gold:hover{background-position:100% 0}
+.btn-line{border-color:var(--gold);color:var(--gold-d);background:transparent}
+.btn-line:hover{background:var(--gold);color:#fff}
+.btn-line.dark{border-color:var(--gold);color:var(--gold-d)}
+.btn-line.dark:hover{background:var(--gold);color:#fff}
+
+header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.94);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+.brand{display:flex;align-items:center;gap:10px}
+.brand .mono{font-family:var(--serif);font-style:italic;font-weight:600;font-size:28px;line-height:1}
+.brand .nm{font-family:var(--serif);font-weight:600;font-size:14px;letter-spacing:.3em;color:var(--gold-d);white-space:nowrap}
+.nav ul{display:flex;gap:28px;list-style:none}
+.nav ul a{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--ink);font-weight:500}
+.nav ul a:hover{color:var(--gold)}
+.nav .btn{padding:11px 18px;font-size:11px}
+@media(max-width:860px){.nav ul{display:none}}
+@media(max-width:600px){.nav .btn{display:none}.nav{justify-content:center}}
+
+/* green card */
+.gcard{background:#fff;color:var(--ink);border:1.5px solid var(--line);border-radius:8px;position:relative;overflow:hidden}
+.gcard::before{content:"";position:absolute;inset:10px;border:1px solid #f3ead2;border-radius:5px;pointer-events:none}
+
+.hero{padding:28px 0 40px}
+.frame{padding:60px 20px 50px;text-align:center}
+.mm{font-family:var(--serif);font-style:italic;font-weight:500;font-size:clamp(88px,14vw,140px);line-height:.95}
+.laurel{width:150px;height:28px;margin:6px auto 0;display:block}
+.hero h1{font-family:var(--serif);font-weight:600;font-size:clamp(24px,4.2vw,40px);letter-spacing:.32em;color:var(--gold-d);margin:20px 0 0;padding-left:.32em}
+.tag{font-size:12px;font-weight:600;letter-spacing:.34em;text-transform:uppercase;color:var(--gold);margin-top:14px}
+.hero p{max-width:480px;margin:22px auto 0;font-size:17px;color:var(--muted)}
+.ctas{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:28px}
+.phone{font-family:var(--serif);font-size:26px;letter-spacing:.08em;margin-top:22px;color:var(--ink)}
+.bottle{position:absolute;bottom:26px;width:clamp(56px,9vw,110px);opacity:.9}
+.bottle.l{left:clamp(20px,3vw,40px)}.bottle.r{right:clamp(20px,3vw,40px);transform:scaleX(-1)}
+@media(max-width:640px){.bottle{display:none}}
+
+.trust{display:grid;grid-template-columns:repeat(4,1fr);margin-top:14px;border:1.5px solid var(--line);border-radius:8px;background:#fff}
+.trust div{padding:18px 8px;text-align:center;border-right:1px solid var(--line)}
+.trust div:last-child{border-right:0}
+.trust b{display:block;font-family:var(--serif);font-weight:500;font-size:30px;line-height:1}
+.trust span{display:block;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-top:6px}
+@media(max-width:640px){.trust{grid-template-columns:1fr 1fr}.trust div:nth-child(2){border-right:0}.trust div:nth-child(-n+2){border-bottom:1px solid var(--line)}}
+
+.svc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.svc{background:#fff;border:1px solid var(--line);border-radius:6px;padding:24px 20px;position:relative}
+.svc h3{font-family:var(--serif);font-weight:500;font-size:24px;color:var(--ink)}
+.svc p{color:var(--muted);font-size:14.5px;margin:6px 0 12px}
+.svc .from{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-d);font-weight:500}
+.svc .badge{position:absolute;top:-10px;left:20px;background:var(--grad);color:#2a2214;font-size:9.5px;letter-spacing:.2em;text-transform:uppercase;padding:3px 9px;font-weight:600;border-radius:2px}
+.svc.feat{border:1.5px solid var(--gold)}
+
+.addons{text-align:center;color:var(--muted);font-size:14px;margin-top:18px}
+.addons b{color:var(--gold-d);font-weight:500}
+@media(max-width:900px){.svc-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.svc-grid{grid-template-columns:1fr}}
+
+.how{padding:44px 24px 40px}
+
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.step{text-align:center;padding:8px}
+.step .n{font-family:var(--serif);font-style:italic;font-size:44px;line-height:1}
+.step h3{font-family:var(--serif);font-weight:500;font-size:23px;color:var(--ink);margin:6px 0 4px}
+.step p{color:var(--muted);font-size:14.5px}
+.why{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:26px}
+.why span{border:1px solid var(--line);border-radius:40px;padding:9px 16px;font-size:13.5px}
+.why span::before{content:"✦ ";color:var(--gold)}
+@media(max-width:700px){.steps{grid-template-columns:1fr;gap:18px}}
+
+.rev-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.rev{background:#fff;border:1px solid var(--line);border-radius:6px;padding:24px}
+.stars{color:var(--gold);letter-spacing:3px;font-size:14px}
+.rev p{font-family:var(--serif);font-style:italic;font-size:19px;line-height:1.35;margin:10px 0 14px}
+.rev .who{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-d)}
+@media(max-width:800px){.rev-grid{grid-template-columns:1fr}}
+
+.faq{max-width:720px;margin:0 auto}
+details{border-bottom:1px solid var(--line)}
+summary{list-style:none;cursor:pointer;padding:18px 0;display:flex;justify-content:space-between;gap:16px;font-family:var(--serif);font-size:21px;font-weight:500;color:var(--ink)}
+summary::-webkit-details-marker{display:none}
+summary i{font-style:normal;color:var(--gold);font-family:var(--sans);transition:.25s}
+details[open] summary i{transform:rotate(45deg)}
+details p{padding:0 0 18px;color:var(--muted);font-size:15px}
+
+.q-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:20px;align-items:stretch}
+.qinfo{padding:36px 30px}
+
+.contact{display:grid;gap:14px;margin-top:22px}
+.contact .k{font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold)}
+.contact .v{font-family:var(--serif);font-size:22px;color:var(--ink)}
+form{background:#fff;border:1px solid var(--line);border-radius:8px;padding:26px}
+.f{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.f .full{grid-column:1/-1}
+label{display:block;font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-d);font-weight:500;margin-bottom:6px}
+input,select,textarea{width:100%;font-family:var(--sans);font-size:16px;padding:13px;border:1px solid #e3d8bd;border-radius:3px;background:#fffdf9;color:var(--ink);outline:none;-webkit-appearance:none;appearance:none}
+select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%23b08a3e' stroke-width='1.5'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 13px center;padding-right:34px}
+input:focus,select:focus,textarea:focus{border-color:var(--gold)}
+textarea{min-height:76px;resize:vertical}
+form .btn{width:100%;margin-top:16px}
+.note{text-align:center;font-size:12.5px;color:var(--muted);margin-top:10px}
+.done{display:none;text-align:center}
+.done h3{font-family:var(--serif);font-weight:500;font-size:32px;color:var(--ink)}
+.done pre{white-space:pre-wrap;text-align:left;background:var(--cream);border:1px solid var(--line);padding:14px;border-radius:4px;font-family:var(--sans);font-size:13.5px;margin:14px 0}
+.done .acts{display:flex;gap:10px;flex-wrap:wrap;justify-content:center}
+@media(max-width:820px){.q-grid{grid-template-columns:1fr}}
+@media(max-width:480px){.f{grid-template-columns:1fr}form{padding:20px}}
+
+footer{background:var(--cream);border-top:1px solid var(--line);color:var(--ink);padding:36px 0 30px;text-align:center}
+footer .mm{font-size:52px}
+footer .nm{font-family:var(--serif);font-weight:600;letter-spacing:.34em;color:var(--gold-d);font-size:16px;margin-top:8px}
+footer .links{font-size:11.5px;letter-spacing:.22em;text-transform:uppercase;margin-top:12px}
+footer .copy{font-size:11px;color:#8f907f;margin-top:16px}
+
+.mbar{display:none;position:fixed;left:0;right:0;bottom:0;z-index:60;background:#fff;border-top:1px solid var(--line);padding:10px 12px calc(10px + env(safe-area-inset-bottom));gap:10px}
+.mbar .btn{flex:1;padding:14px 8px}
+@media(max-width:600px){.mbar{display:flex}body{padding-bottom:76px}section{padding:44px 0}}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#a97d2f"/><stop offset=".45" stop-color="#e3c983"/><stop offset=".7" stop-color="#c9a253"/><stop offset="1" stop-color="#9c7228"/>
+    </linearGradient>
+    <symbol id="leaf" viewBox="0 0 160 30">
+      <path d="M10 18 Q80 6 150 18" fill="none" stroke="url(#g)" stroke-width="2"/>
+      <circle cx="80" cy="12" r="4" fill="#e8d39c"/>
+      <path d="M14 18 C22 6 36 4 44 10 C36 18 24 22 14 18Z" fill="url(#g)"/>
+      <path d="M146 18 C138 6 124 4 116 10 C124 18 136 22 146 18Z" fill="url(#g)"/>
+    </symbol>
+    <symbol id="bottle" viewBox="0 0 120 200">
+      <g fill="none" stroke="url(#g)" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round">
+        <path d="M40 48 L40 30 L18 30 L10 36 L10 44 L22 44 L26 40 L40 40"/>
+        <path d="M40 30 L62 30 Q78 30 82 46 L84 56 L46 56 L44 48 Z"/>
+        <path d="M48 56 L48 70 L80 70 L80 56"/>
+        <path d="M52 58 v10 M58 58 v10 M64 58 v10 M70 58 v10 M76 58 v10"/>
+        <path d="M46 70 Q36 82 36 100 L36 182 Q36 192 46 192 L84 192 Q94 192 94 182 L94 100 Q94 82 84 70"/>
+        <rect x="48" y="112" width="34" height="44" rx="4"/>
+      </g>
+      <path d="M65 120 C72 128 72 140 65 148 C58 140 58 128 65 120Z" fill="url(#g)"/>
+    </symbol>
+  </defs>
+</svg>
+
+<header>
+  <div class="wrap nav">
+    <a href="#top" class="brand"><span class="mono gold">MM</span><span class="nm">MEADOW MAIDS</span></a>
+    <ul>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#how">How it works</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ul>
+    <a href="#quote" class="btn btn-gold">Book a Clean</a>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero">
+  <div class="wrap">
+    <div class="gcard frame">
+      <svg class="bottle l" viewBox="0 0 120 200"><use href="#bottle"/></svg>
+      <svg class="bottle r" viewBox="0 0 120 200"><use href="#bottle"/></svg>
+      <div class="mm gold">MM</div>
+      <svg class="laurel" viewBox="0 0 160 30"><use href="#leaf"/></svg>
+      <h1>MEADOW MAIDS</h1>
+      <div class="tag">Luxury Home Cleaning · Los Angeles</div>
+      <p>Detail-obsessed cleaning, the same trusted cleaner every visit. Come home to calm.</p>
+      <div class="ctas">
+        <a href="#quote" class="btn btn-gold">Get a Free Quote</a>
+        <a href="tel:+10000000000" class="btn btn-line">Call or Text</a>
+      </div>
+      <div class="phone">(XXX) XXX-XXXX</div>
+    </div>
+    <div class="trust">
+      <div><b class="gold">[X]+</b><span>Years</span></div>
+      <div><b class="gold">[XXX]+</b><span>Homes cleaned</span></div>
+      <div><b class="gold">5.0★</b><span>Rating</span></div>
+      <div><b class="gold">100%</b><span>Guarantee</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="services" class="cream">
+  <div class="wrap">
+    <div class="head"><span class="eyebrow">Services</span><h2>Tailored to your home</h2></div>
+    <div class="svc-grid">
+      <div class="svc"><h3>Standard Clean</h3><p>Dusting, floors, kitchen and bathrooms made to shine.</p><div class="from">From $[XXX]</div></div>
+      <div class="svc feat"><span class="badge">Most booked</span><h3>Deep Clean</h3><p>Baseboards, door frames, built-up grime, every corner.</p><div class="from">From $[XXX]</div></div>
+      <div class="svc"><h3>Move In / Out</h3><p>Inside cabinets, appliances and closets — ready for keys.</p><div class="from">From $[XXX]</div></div>
+      <div class="svc"><h3>Rental Turnover</h3><p>Airbnb resets between guests, fresh linens, photo-ready.</p><div class="from">From $[XXX]</div></div>
+    </div>
+    <p class="addons"><b>Add-ons:</b> inside fridge · oven · interior windows · laundry · inside cabinets</p>
+  </div>
+</section>
+
+<section id="how">
+  <div class="wrap"><div class="gcard how">
+    <div class="head"><span class="eyebrow">How it works</span><h2>Three easy steps</h2></div>
+    <div class="steps">
+      <div class="step"><div class="n gold">i.</div><h3>Request a quote</h3><p>Tell us about your home — get a clear price fast.</p></div>
+      <div class="step"><div class="n gold">ii.</div><h3>Pick your time</h3><p>Weekly, bi-weekly, monthly or one-time.</p></div>
+      <div class="step"><div class="n gold">iii.</div><h3>Come home to calm</h3><p>Not perfect? We come back and fix it free.</p></div>
+    </div>
+    <div class="why">
+      <span>Same cleaner every visit</span><span>Non-toxic, pet-safe products</span><span>We bring all supplies</span><span>Easy rescheduling by text</span>
+    </div>
+  </div></div>
+</section>
+
+<section id="reviews" class="cream">
+  <div class="wrap">
+    <div class="head"><span class="eyebrow">Reviews</span><h2>Loved by our clients</h2></div>
+    <div class="rev-grid">
+      <div class="rev"><div class="stars">★★★★★</div><p>[Real client review]</p><div class="who">[Name, L.] · [Area]</div></div>
+      <div class="rev"><div class="stars">★★★★★</div><p>[Real client review]</p><div class="who">[Name, L.] · [Area]</div></div>
+      <div class="rev"><div class="stars">★★★★★</div><p>[Real client review]</p><div class="who">[Name, L.] · [Area]</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap">
+    <div class="head"><span class="eyebrow">FAQ</span><h2>Quick answers</h2></div>
+    <div class="faq">
+      <details><summary>Do I need to be home?<i>+</i></summary><p>No. Leave a key or door code — we'll text you when we arrive and when we're done.</p></details>
+      <details><summary>Not happy with something?<i>+</i></summary><p>Tell us within 24 hours and we'll come back to re-clean it free.</p></details>
+      <details><summary>How do I pay?<i>+</i></summary><p>[Zelle, Venmo, Apple Pay, card or cash] — after the cleaning.</p></details>
+      <details><summary>Cancellations?<i>+</i></summary><p>Free with at least [24] hours' notice.</p></details>
+      <details><summary>Post-construction cleaning?<i>+</i></summary><p>We focus on lived-in homes, move-ins/outs and rentals, so we don't take post-construction jobs.</p></details>
+    </div>
+  </div>
+</section>
+
+<section id="quote" class="cream">
+  <div class="wrap q-grid">
+    <div class="gcard qinfo">
+      <span class="eyebrow">Free quote</span>
+      <h2>Get your price</h2>
+      <div class="contact">
+        <div><div class="k">Call or text</div><div class="v">(XXX) XXX-XXXX</div></div>
+        <div><div class="k">Email</div><div class="v">[email@meadowmaids.com]</div></div>
+        <div><div class="k">Instagram</div><div class="v">[@instagram]</div></div>
+        <div><div class="k">Area</div><div class="v">Los Angeles & nearby</div></div>
+      </div>
+    </div>
+    <form id="qf" novalidate>
+      <div id="fields">
+        <div class="f">
+          <div><label for="name">Name</label><input id="name" autocomplete="name" placeholder="Your name"></div>
+          <div><label for="phone">Phone</label><input id="phone" type="tel" autocomplete="tel" placeholder="(310) 555-0123"></div>
+          <div><label for="svc">Service</label><select id="svc"><option>Standard Clean</option><option selected>Deep Clean</option><option>Move In / Out</option><option>Rental Turnover</option></select></div>
+          <div><label for="home">Home size</label><select id="home"><option>Studio</option><option>1 bed / 1 bath</option><option selected>2 bed / 2 bath</option><option>3 bed / 2 bath</option><option>4+ bed</option></select></div>
+          <div class="full"><label for="notes">Date, ZIP, notes</label><textarea id="notes" placeholder="e.g. Saturday, 90046, one dog"></textarea></div>
+        </div>
+        <button class="btn btn-gold" type="submit">Get My Free Quote</button>
+        <p class="note">No commitment — we text you back with your price.</p>
+      </div>
+      <div class="done" id="done">
+        <h3>Almost there!</h3>
+        <pre id="summary"></pre>
+        <div class="acts">
+          <a id="sms" class="btn btn-gold" href="#">Send by Text</a>
+          <a id="mail" class="btn btn-line dark" href="#">Send by Email</a>
+        </div>
+      </div>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="mm gold">MM</div>
+  <svg class="laurel" viewBox="0 0 160 30" style="width:110px;height:20px"><use href="#leaf"/></svg>
+  <div class="nm">MEADOW MAIDS</div>
+  <div class="links">[WEBSITE] · [@INSTAGRAM]</div>
+  <div class="copy">© <span id="yr"></span> Meadow Maids · Los Angeles, CA</div>
+</footer>
+
+<div class="mbar">
+  <a href="tel:+10000000000" class="btn btn-line dark">Call</a>
+  <a href="#quote" class="btn btn-gold">Free Quote</a>
+</div>
+
+<script>
+// ===== Edit when you have the real contacts =====
+const PHONE = "+10000000000";
+const EMAIL = "email@meadowmaids.com";
+// =================================================
+document.querySelectorAll('a[href^="tel:"]').forEach(a=>a.href="tel:"+PHONE);
+document.getElementById("yr").textContent=new Date().getFullYear();
+document.getElementById("qf").addEventListener("submit",e=>{
+  e.preventDefault();
+  const v=id=>document.getElementById(id).value.trim();
+  if(!v("name")||!v("phone")){["name","phone"].forEach(id=>{if(!v(id))document.getElementById(id).style.borderColor="#d0694d"});return}
+  const msg=`Hi Meadow Maids! I'd like a quote.
+Name: ${v("name")}
+Phone: ${v("phone")}
+Service: ${v("svc")}
+Home: ${v("home")}${v("notes")?"\nNotes: "+v("notes"):""}`;
+  document.getElementById("summary").textContent=msg;
+  document.getElementById("sms").href="sms:"+PHONE+"&body="+encodeURIComponent(msg);
+  document.getElementById("mail").href="mailto:"+EMAIL+"?subject="+encodeURIComponent("Cleaning quote")+"&body="+encodeURIComponent(msg);
+  document.getElementById("fields").style.display="none";
+  document.getElementById("done").style.display="block";
+});
+</script>
+</body>
+</html>
